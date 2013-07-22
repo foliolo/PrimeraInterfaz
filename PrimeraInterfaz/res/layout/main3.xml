@@ -1,0 +1,25 @@
+<!--  Este layout solo es para API mayores del level 14 (prueba realizada con level 10)
+<GridLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+		android:layout_gravity="fill_horizontal"
+        android:hint="@string/destinatario" />
+
+    <EditText
+        android:layout_gravity="fill"
+        android:hint="@string/hint_texto" />
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:text="@string/texto_boton" />
+
+</GridLayout>
+-->
+<LinearLayout>
+    
+</LinearLayout>

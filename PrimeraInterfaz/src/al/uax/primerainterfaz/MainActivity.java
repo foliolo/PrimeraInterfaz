@@ -10,6 +10,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+//		setContentView(R.layout.main2);
+//		setContentView(R.layout.main3);
 	}
 
 	@Override
@@ -18,5 +20,4 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
 }

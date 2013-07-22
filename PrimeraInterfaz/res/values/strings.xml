@@ -6,5 +6,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="hint_texto">Introduce el mensaje&#8230;</string>
     <string name="texto_boton">Enviar</string>
+    <string name="destinatario">Destinatario</string>
 
 </resources>
