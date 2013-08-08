@@ -1,5 +1,7 @@
 package al.uax.primerainterfaz;
 
+
+//import android.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,10 +9,14 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
+	private EditText mDestinatario;
+	private EditText mMensaje;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -18,6 +24,9 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.main);
 //		setContentView(R.layout.main2);
 //		setContentView(R.layout.main3);
+
+        mDestinatario = (EditText) findViewById(R.id.destinatario);
+        mMensaje = (EditText) findViewById(R.id.mensaje);
 		
 		Button boton = (Button)findViewById(R.id.boton_enviar);
 		boton.setOnClickListener(new OnClickListener(){
@@ -38,11 +47,12 @@ public class MainActivity extends Activity {
 		super.onResume();
 		Log.e("TAG", "Resume");
 	}
-	
+	 
 	@Override
 	protected void onPause() {
 		super.onPause();
 		Log.e("TAG", "Pause");
+		
 	}
 	
 	@Override
@@ -70,5 +80,33 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
+	@Override
+	protected void onSaveInstanceState(Bundle outState){
+		Log.e("TAG", "Estado salvado");
+
+		String destinatario = mDestinatario.getText().toString();
+		String mensaje = mMensaje.getText().toString();
+		
+		outState.putString("destinatario", destinatario);
+		outState.putString("mensaje", mensaje);
+		
+		super.onSaveInstanceState(outState);
+	}
+	
+	//No se por que no se puede sobreescribir
+	//@Override
+	protected void onRestoreInstaceState(Bundle savedInstanceState){
+		Log.e("TAG", "Estado restaurado");
+		
+		if(savedInstanceState != null){
+			String destinatario = savedInstanceState.getString("destinatario");
+			String mensaje = savedInstanceState.getString("mensaje");
+			
+			mDestinatario.setText(destinatario);
+			mMensaje.setText(mensaje);
+		}
+		
+		super.onRestoreInstanceState(savedInstanceState);
+	}
 	
 }
