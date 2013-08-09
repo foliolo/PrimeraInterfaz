@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <EditText
+        android:id="@+id/destinatario"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="@string/destinatario" />
+
+    <EditText
+        android:id="@+id/mensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/destinatario"
+        android:layout_toLeftOf="@+id/boton_enviar"
+        android:hint="@string/hint_texto" />
+
+    <Button
+        android:id="@+id/boton_enviar"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@color/Bisque"
+        android:text="@string/texto_boton" />
+
+</RelativeLayout>
