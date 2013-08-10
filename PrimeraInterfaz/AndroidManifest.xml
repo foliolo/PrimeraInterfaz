@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Primera Interfaz  
 <manifest 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" 
@@ -19,6 +22,38 @@
         <activity
             android:name="al.uax.primerainterfaz.MainActivity"
             android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+-->
+
+<!--  Listas y Adapters -->
+<manifest 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" 
+    tools:ignore="OldTargetApi"
+    package="al.uax.listasyadapters"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="15" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name2"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="al.uax.listasyadapters.ListasAdapters"
+            android:label="@string/app_name2" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

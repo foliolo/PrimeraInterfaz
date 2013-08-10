@@ -1,7 +1,7 @@
 package al.uax.primerainterfaz;
 
 
-//import android.R;
+import al.uax.listasyadapters.R; //Se debe poner el paquete de la aplicacion principal del manifest
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;

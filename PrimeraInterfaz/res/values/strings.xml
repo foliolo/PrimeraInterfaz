@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Primera Interfaz</string>
+    <string name="app_name2">Listas y Adapters</string>
     <string name="action_settings">Configuraciones</string>
     <string name="hello_world">Hola mundo!</string>
     <string name="hint_texto">Introduce el mensaje&#8230;</string>
